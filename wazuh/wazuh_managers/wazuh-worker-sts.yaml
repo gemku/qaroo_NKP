@@ -144,7 +144,7 @@ spec:
       spec:
         accessModes:
           - ReadWriteOnce
-        storageClassName: wazuhs
+        storageClassName: nutanix-volume
         resources:
           requests:
             storage: 500Mi
