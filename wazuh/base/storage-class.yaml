@@ -1,13 +1,5 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: wazuhs
-provisioner: nfs.csi.k8s.io
-parameters:
-  server: 10.1.177.86
-  share: "/wazuh/nfs/share"
-reclaimPolicy: Retain
-volumeBindingMode: Immediate
-mountOptions:
-  - hard
-  - nfsvers=4.1
+  name: nutanix-volume
+provisioner: csi.nutanix.com
