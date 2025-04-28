@@ -4,8 +4,8 @@ metadata:
   name: wazuhs
 provisioner: nfs.csi.k8s.io
 parameters:
-  server: 10.1.177.86
-  share: "/wazuh/nfs/share"
+  server: 
+  share: 
 reclaimPolicy: Retain
 volumeBindingMode: Immediate
 mountOptions:
