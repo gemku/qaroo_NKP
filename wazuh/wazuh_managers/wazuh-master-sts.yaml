@@ -153,7 +153,7 @@ spec:
       spec:
         accessModes:
           - ReadWriteOnce
-        storageClassName: nutanix-volume
+        storageClassName: gp2
         resources:
           requests:
             storage: 500Mi
