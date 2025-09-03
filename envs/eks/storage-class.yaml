@@ -11,9 +11,10 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: wazuh-storage
-provisioner: kubernetes.io/aws-ebs
+provisioner: efs.csi.aws.com
 parameters:
-  encrypted: 'true'
-  type: gp2
-volumeBindingMode: WaitForFirstConsumer
-reclaimPolicy: Retain  # Useful in case you delete the PersistentVolumeClaim
+  provisioningMode: efs-dynamic
+  fileSystemId: fs-02d82d614703fd246
+  directoryPerms: "700"
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
