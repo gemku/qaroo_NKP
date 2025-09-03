@@ -1,5 +1,10 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: nutanix-volume
-provisioner: csi.nutanix.com
+  name: wazuh-storage
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  encrypted: 'true'
+  type: gp2
+volumeBindingMode: WaitForFirstConsumer
+reclaimPolicy: Retain  
